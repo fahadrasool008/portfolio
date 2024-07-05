@@ -1,0 +1,659 @@
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+    --main-color-light: #00eeff8c;
+}
+
+
+
+body {
+    background-color: var(--bg-color);
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 0 9rem 0 6rem;
+    z-index: 1;
+    background-color: var(--bg-color);
+    border-bottom: 0.001rem solid var(--second-bg-color);
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: .2s ease;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: var(--main-color);
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.active {
+    color: var(--main-color);
+}
+
+
+button {
+    border: none;
+    background-color: var(--main-color);
+    padding: 1rem 1.5rem;
+    border-radius: 3rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 0.8rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+button:hover {
+    box-shadow: none;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.intro,
+.about-me,
+.my-skills,
+.my-projects,
+.contact-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    margin-top: 5rem;
+}
+
+.intro-image img,
+.about-image img {
+    width: 40vw;
+}
+
+.intro-content,
+.about-content {
+    width: 45%;
+}
+
+.intro-content h3,
+.about-content h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.01rem;
+    font-weight: 700;
+    line-height: .8rem;
+}
+
+.intro-content h1,
+.about-content h1,
+.my-skills h1,
+.my-projects>h1,
+.contact-me h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1rem;
+
+}
+
+.my-skills h1,
+.my-projects>h1,
+.contact-me h1 {
+    margin-bottom: 5rem;
+}
+
+.intro-content p,
+.about-content p {
+    text-align: justify;
+}
+
+.social-icon {
+    margin: .5rem;
+}
+
+
+.about-content h3 {
+    line-height: 0.001rem;
+    margin-bottom: 2rem;
+    font-family: "Montserrat";
+}
+
+.about-content h1 {
+    line-height: 0.001rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    border: 0.1rem solid var(--main-color);
+    color: var(--main-color);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: .3s ease;
+}
+
+.social-icons a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+    transform: scale(1.1);
+}
+
+.my-skills {
+    flex-direction: column;
+}
+
+.my-skills .skill-boxes {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+}
+
+.skill-boxes .line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box,
+.project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second-bg-color);
+    margin: .5rem;
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+.box p {
+    text-align: center;
+}
+
+.box h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.my-skills {
+    margin-top: 5rem;
+}
+
+.box i {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+.box {
+    border: 0.1rem solid var(--main-color-light);
+    transition: .4s ease;
+}
+
+.box:hover {
+    box-shadow: 0 0 .5rem var(--main-color);
+    transform: scale(1.01);
+}
+
+.my-skills h1 {
+    margin-bottom: 4rem;
+}
+
+.my-projects,
+.contact-me {
+    flex-direction: column;
+}
+
+.my-projects .project-boxes {
+    display: flex;
+}
+
+.project-box i {
+    font-size: 5rem;
+    color: var(--bg-color);
+    transition: .4s ease;
+}
+
+
+.project-box {
+    position: relative;
+}
+
+.project-box-layer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .05), var(--main-color));
+    border-radius: 1rem;
+    opacity: 0;
+    transition: .3s ease;
+
+}
+
+.project-box:hover .project-box-layer {
+    opacity: 1;
+}
+
+.project-box-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+.project-box-layer a i {
+    font-size: 1.5rem;
+    color: var(--bg-color);
+}
+
+.project-box-layer p {
+    text-align: center;
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form {
+    width: 60%;
+}
+
+form .input-box input,
+form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--second-bg-color);
+    border: none;
+    border-radius: .4rem;
+    margin: .5rem 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+form .input-box input {
+    width: 45%;
+
+}
+
+form textarea {
+    width: 96%;
+    resize: none;
+}
+
+#send-btn {
+    margin-top: 1rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--second-bg-color);
+    height: 10vh;
+    padding: 0 1rem;
+}
+footer .footer-icons {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    justify-content: space-between;
+}
+footer p{
+    flex: 2;
+}
+
+footer p {
+    font-size: .8rem;
+}
+
+footer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--main-color);
+    border-radius: .3rem;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+footer a i {
+    font-size: 1.5rem;
+}
+
+footer a:hover {
+    font-size: 1.5rem;
+    box-shadow: 0 0 .5rem var(--main-color);
+    transform: scale(1.05);
+}
+
+footer .social-icons {
+    width: 30%;
+}
+
+.social-icons a {
+    margin-left: 1rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+.project-boxes {
+    display: flex;
+}
+
+.project-box,
+.box {
+    height: 50vh;
+    width: 30vw;
+}
+
+footer {
+    margin-top: 5rem;
+}
+
+.project-box {
+    background-color: var(--bg-color);
+}
+
+.project-box i {
+    color: var(--second-bg-color);
+}
+
+.about-me,
+.my-projects {
+    background-color: var(--second-bg-color);
+}
+
+
+.active-nav {
+    display: block;
+}
+
+.menu-btn {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    display: none;
+}
+
+
+
+/* Breakpoints */
+@media (max-width: 1280px) {
+    .box p {
+        text-align: center;
+        font-size: .8rem;
+    }
+
+    .box h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 1320px) {
+    form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 970px) {
+    nav {
+        padding: .8rem;
+    }
+    .line {
+        flex-direction: column;
+    }
+
+    .box {
+        display: flex;
+        width: 100%;
+        padding: 0.05rem 0.05rem;
+        height: 80%;
+    }
+
+    .box p {
+        margin-bottom: .5rem;
+    }
+
+    .box i {
+        font-size: 2rem;
+    }
+
+    .box * {
+        padding: 0.3rem;
+        margin: 0.3rem;
+    }
+
+    form .input-box input {
+        width: 100%;
+        font-size: .8rem;
+    }
+
+    form textarea {
+        width: 95%;
+    }
+
+    footer {
+        height: 10vh;
+    }
+
+    .intro-content h1,
+    .about-content h1,
+    .my-skills h1,
+    .my-projects>h1,
+    .contact-me h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: .7rem;
+    }
+
+
+    nav ul {
+        position: absolute;
+        top: -1000px;
+        left: 3rem;
+        width: 80%;
+        top: 80%;
+        background-color: var(--bg-color);
+        transition: .4s ease;
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li:hover {
+        background-color: var(--second-bg-color);
+        width: 100%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 950px) {
+    nav {
+        padding: .7rem;
+    }
+    .intro,
+    .about-me {
+        flex-direction: column;
+    }
+
+    .intro-image img,
+    .about-image img {
+        width: 70vw;
+    }
+
+    .intro-content,
+    .about-content {
+        width: 80%;
+        margin-bottom: 3rem;
+    }
+
+    .about-content {
+        margin: 2rem 0 1rem 0;
+    }
+
+    .my-projects .project-boxes {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-box {
+        width: 90%;
+    }
+
+    .intro-content h3,
+    .about-content h3 {
+        font-size: 1rem;
+        letter-spacing: 0.01rem;
+        font-weight: 700;
+        line-height: .4rem;
+    }
+
+    .intro-content h1,
+    .about-content h1,
+    .my-skills h1,
+    .my-projects>h1,
+    .contact-me h1 {
+        font-size: 1.9rem;
+        font-weight: 700;
+        line-height: .6rem;
+
+    }
+}
+
+@media (max-width: 744px) {
+    nav {
+        padding: .6rem;
+    }
+    footer{
+        height: 12vh;
+        flex-direction: column-reverse;
+        padding: 1rem 0;
+    }
+    footer .footer-icons {
+        width: 90%;
+    }
+    footer p{
+        margin-bottom: 0;
+    }
+    
+}
+
+@media (max-width: 445px) {
+    nav {
+        padding: .5rem;
+    }
+    footer p{
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 405px) {
+    nav {
+        padding: .5rem;
+    }
+    footer p{
+        font-size: .6rem;
+    }
+   footer .footer-icons  .social-icons a .social-icon{
+    font-size: .6rem;
+   }
+   footer .footer-icons  .social-icons{
+    width: 60%;
+   }
+    
+}
+
+@media (max-width: 280px) {
+    footer p{
+        font-size: .5rem;
+    }
+    nav {
+        padding: .3rem;
+    }
+}
+
+@media (max-width: 325px) {
+    nav {
+        padding: .4rem;
+    }
+    .intro-content h3{
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 325px) {
+    nav {
+        padding: .2rem;
+    }
+    .intro-content h3,
+    .about-content h3 {
+        font-size: .8rem;
+        letter-spacing: 0.01rem;
+        font-weight: 700;
+        line-height: .4rem;
+    }
+
+    .intro-content h1,
+    .about-content h1,
+    .my-skills h1,
+    .my-projects>h1,
+    .contact-me h1 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: .6rem;
+
+    }
+}
