@@ -29,3 +29,10 @@ menuBtn.onclick = () => {
         menuBtn.classList.toggle('bx-x');
         navUL.classList.toggle('active-nav');
 };
+
+
+function downloadFile(){
+    let link = document.querySelector(".cv-btn a");
+    link.download = "CV.pdf";
+    link.href = "assets/CV.pdf";
+}
