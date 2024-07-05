@@ -580,6 +580,9 @@ footer {
     nav {
         padding: .6rem;
     }
+    .intro {
+        margin-top: 1.9rem;
+    }
     footer{
         height: 12vh;
         flex-direction: column-reverse;
@@ -595,6 +598,9 @@ footer {
 }
 
 @media (max-width: 445px) {
+    .intro {
+        margin-top: 1.7rem;
+    }
     nav {
         padding: .5rem;
     }
@@ -604,6 +610,9 @@ footer {
 }
 
 @media (max-width: 405px) {
+    .intro {
+        margin-top: 1.5rem;
+    }
     nav {
         padding: .5rem;
     }
@@ -620,6 +629,9 @@ footer {
 }
 
 @media (max-width: 280px) {
+    .intro {
+        margin-top: 1.3rem;
+    }
     footer p{
         font-size: .5rem;
     }
@@ -629,6 +641,9 @@ footer {
 }
 
 @media (max-width: 325px) {
+    .intro {
+        margin-top: 1.2rem;
+    }
     nav {
         padding: .4rem;
     }
@@ -638,6 +653,9 @@ footer {
 }
 
 @media (max-width: 325px) {
+    .intro {
+        margin-top: 1.1rem;
+    }
     nav {
         padding: .2rem;
     }
