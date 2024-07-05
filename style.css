@@ -522,6 +522,9 @@ footer {
     nav {
         padding: .7rem;
     }
+    .intro {
+        margin-top: 2rem;
+    }
     .intro,
     .about-me {
         flex-direction: column;
