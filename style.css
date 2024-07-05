@@ -522,12 +522,12 @@ footer {
     nav {
         padding: .7rem;
     }
-    .intro {
-        margin-top: 2rem;
-    }
     .intro,
     .about-me {
         flex-direction: column;
+    }
+    .intro, .contact-me {
+        min-height: 20vh;
     }
 
     .intro-image img,
@@ -577,11 +577,11 @@ footer {
 }
 
 @media (max-width: 744px) {
+    .intro, .contact-me {
+        min-height: 10vh;
+    }
     nav {
         padding: .6rem;
-    }
-    .intro {
-        margin-top: 1.9rem;
     }
     footer{
         height: 12vh;
@@ -598,8 +598,8 @@ footer {
 }
 
 @media (max-width: 445px) {
-    .intro {
-        margin-top: 1.7rem;
+    .intro, .contact-me {
+        min-height: 5vh;
     }
     nav {
         padding: .5rem;
@@ -610,8 +610,8 @@ footer {
 }
 
 @media (max-width: 405px) {
-    .intro {
-        margin-top: 1.5rem;
+    .intro, .contact-me {
+        min-height: 2vh;
     }
     nav {
         padding: .5rem;
@@ -629,8 +629,8 @@ footer {
 }
 
 @media (max-width: 280px) {
-    .intro {
-        margin-top: 1.3rem;
+    .intro, .contact-me {
+        min-height: 1vh;
     }
     footer p{
         font-size: .5rem;
@@ -641,8 +641,8 @@ footer {
 }
 
 @media (max-width: 325px) {
-    .intro {
-        margin-top: 1.2rem;
+    .intro, .contact-me {
+        min-height: 2vh;
     }
     nav {
         padding: .4rem;
@@ -653,9 +653,6 @@ footer {
 }
 
 @media (max-width: 325px) {
-    .intro {
-        margin-top: 1.1rem;
-    }
     nav {
         padding: .2rem;
     }
